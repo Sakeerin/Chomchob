@@ -1,0 +1,162 @@
+{
+    "info": {
+      "name": "Wallet API",
+      "description": "API endpoints for managing wallet and cryptocurrency transfers",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Admin",
+        "item": [
+          {
+            "name": "Increase User Balance",
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\"userId\": \"123\", \"amount\": 100}"
+              },
+              "url": {
+                "raw": "{{baseURL}}/admin/increase-balance/123",
+                "protocol": "http",
+                "host": [
+                  "{{baseURL}}"
+                ],
+                "path": [
+                  "admin",
+                  "increase-balance",
+                  "123"
+                ]
+              },
+              "description": "Increase the user's balance"
+            },
+            "response": []
+          },
+          {
+            "name": "Decrease User Balance",
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\"userId\": \"123\", \"amount\": 50}"
+              },
+              "url": {
+                "raw": "{{baseURL}}/admin/decrease-balance/123",
+                "protocol": "http",
+                "host": [
+                  "{{baseURL}}"
+                ],
+                "path": [
+                  "admin",
+                  "decrease-balance",
+                  "123"
+                ]
+              },
+              "description": "Decrease the user's balance"
+            },
+            "response": []
+          },
+          {
+            "name": "Get Total Balance",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "{{baseURL}}/admin/total-balance",
+                "protocol": "http",
+                "host": [
+                  "{{baseURL}}"
+                ],
+                "path": [
+                  "admin",
+                  "total-balance"
+                ]
+              },
+              "description": "Get the total balance of all cryptocurrencies"
+            },
+            "response": []
+          },
+          {
+            "name": "Add Cryptocurrency",
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\"name\": \"XRP\", \"symbol\": \"XRP\"}"
+              },
+              "url": {
+                "raw": "{{baseURL}}/admin/add-cryptocurrency",
+                "protocol": "http",
+                "host": [
+                  "{{baseURL}}"
+                ],
+                "path": [
+                  "admin",
+                  "add-cryptocurrency"
+                ]
+              },
+              "description": "Add a new cryptocurrency"
+            },
+            "response": []
+          },
+          {
+            "name": "Manage Exchange Rate",
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\"fromCurrency\": \"ETH\", \"toCurrency\": \"BTC\", \"rate\": 0.05}"
+              },
+              "url": {
+                "raw": "{{baseURL}}/admin/manage-exchange-rate",
+                "protocol": "http",
+                "host": [
+                  "{{baseURL}}"
+                ],
+                "path": [
+                  "admin",
+                  "manage-exchange-rate"
+                ]
+              },
+              "description": "Manage the exchange rate between cryptocurrencies"
+            },
+            "response": []
+          }
+        ]
+      },
+      {
+        "name": "User",
+        "item": [
+          {
+            "name": "Transfer Cryptocurrency",
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\"senderId\": \"123\", \"recipientId\": \"456\", \"amount\": 10}"
+              },
+              "url": {
+                "raw": "{{baseURL}}/user/transfer",
+                "protocol": "http",
+                "host": [
+                  "{{baseURL}}"
+                ],
+                "path": [
+                  "user",
+                  "transfer"
+                ]
+              },
+              "description": "Transfer cryptocurrency from the sender to the recipient"
+            },
+            "response": []
+          }
+        ]
+      }
+    ]
+  }
+  
